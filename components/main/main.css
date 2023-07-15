@@ -1,0 +1,37 @@
+main{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap 20;
+}
+
+main > section {
+    display: flex;
+    padding: 50px;
+    gap: 20px;
+  }
+
+main img{
+    height: 80px;
+    width: auto;
+    filter: brightness(120%);
+    transition: 0.2s ease-in-out;
+}
+
+  #piedra{
+    /* EFECTO ESPEJO PORQUE EL PULGAR LO QUERIA ESTA GENTE ARRIBA */
+    transform:scaleX(-1);
+  }
+  
+  main img:hover {
+    transform: scale(1.2) rotate(15deg);
+  }
+
+
+main button {
+    border: none;
+    background-color: transparent;
+   padding: 29px;   
+  }
