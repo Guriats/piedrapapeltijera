@@ -4,7 +4,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap 20;
+    gap: 20;
 }
 
 main > section {

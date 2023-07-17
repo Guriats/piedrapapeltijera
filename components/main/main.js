@@ -1,7 +1,7 @@
 import "./Main.css";
 
-const jugadorElige = "";
-const maquinaElige = "";
+let jugadorElige = "";
+let maquinaElige = "";
 
 const template = () => {
   return `
@@ -47,7 +47,7 @@ const jugar = () => {
 
   const result = document.querySelector("#resultado");
 
-  opciones = ["piedra", "papel", "tijera"];
+  const opciones = ["piedra", "papel", "tijera"];
   const numeroAleatorio = Math.floor(Math.random() * opciones.length);
 
   maquinaElige = opciones[numeroAleatorio];
@@ -58,7 +58,7 @@ const jugar = () => {
     result.innerHTML = `${jugadorElige} vs ${maquinaElige}: Has ganado!`;
   } else if (jugadorElige === "tijera" && maquinaElige === "papel") {
     result.innerHTML = `${jugadorElige} vs ${maquinaElige}: Has ganado!`;
-  } else if (jugadorElige === computerChoice) {
+  } else if (jugadorElige === maquinaElige) {
     result.innerHTML = `${jugadorElige} vs ${maquinaElige}: Empate!`;
   } else {
     result.innerHTML = `${jugadorElige} vs ${maquinaElige}: Has perdido!`;
@@ -67,31 +67,6 @@ const jugar = () => {
 
 
 
-
-/*const jugar = () => {
-  opciones = ["piedra", "papel", "tijera"];
-
-  const numeroAleatorio = Math.floor(Math.random() * opciones.length);
-  
-
-  if (jugadorElige === "piedra" && maquinaElige === "opciones") { /////// se podría acceder de esta manera?
-    document.querySelector("#resultado").innerHTML = "Has ganado";
-  }
-
-  if (jugadorElige === "tijera" && maquinaElige === "opciones") {
-    document.querySelector("#resultado").innerHTML = "Has ganado";
-  }
-
-  if (jugadorElige === "papel" && maquinaElige === "opciones") {
-    document.querySelector("#resultado").innerHTML = "Has ganado";
-  }
-
-  if (jugadorElige === maquinaElige) {
-    document.querySelector("#resultado").innerHTML = "Empate";
-  } else {
-    document.querySelector("#resultado").innerHTML = "Has perdido";
-  }
-};*/
 
 const Main = () => {
   document.querySelector("main").innerHTML = template();
